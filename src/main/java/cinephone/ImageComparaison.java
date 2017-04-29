@@ -132,7 +132,6 @@ public static int correspond_film_v2 (String image_test, List<MatOfKeyPoint> dat
     DescriptorMatcher descriptorMatcher = DescriptorMatcher.create(DescriptorMatcher.FLANNBASED);
           
     init_keyPoints_descriptors(user_poster, userKeyPoints, userDescriptors, featureDetector, descriptorExtractor);
-	  System.out.println("EOKEPNCFZLCN");
 	  for (int i=0; i< database_keyPoint.size(); i++){
 	      descriptorMatcher.knnMatch(userDescriptors, database_descriptors.get(i), matches, 2);
 		  current = check_similarity_surf_2(matches,0.5);
@@ -158,9 +157,9 @@ public static int correspond_film_v2 (String image_test, List<MatOfKeyPoint> dat
 	  Mat real_poster = Mat.ones(new org.opencv.core.Size(110, 110), CvType.CV_32F);
 	  w = (int)user_poster.size().width;
 	  h = (int)user_poster.size().height;
-	  Rect crop = new Rect(w/4,h/4,w/2,h/2);
-	  user_poster = user_poster.submat(crop);
-	  Imgproc.resize(user_poster, user_poster, new org.opencv.core.Size(), 0.25,0.25,1);
+//	  Rect crop = new Rect(w/4,h/4,w/2,h/2);
+//	  user_poster = user_poster.submat(crop);
+//	  Imgproc.resize(user_poster, user_poster, new org.opencv.core.Size(), 0.25,0.25,1);
 
 
       MatOfKeyPoint userKeyPoints = new MatOfKeyPoint(); 

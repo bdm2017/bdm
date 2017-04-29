@@ -15,7 +15,8 @@ public class Main {
 	static ArrayList<String> imageTab;
 	static ArrayList<String> moviesDataTab;
 	
-    private static final String ACCESS_TOKEN = "lBzf_Shi9McAAAAAAAAD9LBIUIN9kvTuhlIQyavZf4ph_KtXrfrcVPcBNLJjjB-a";
+//  private static final String ACCESS_TOKEN = "lBzf_Shi9McAAAAAAAAD9LBIUIN9kvTuhlIQyavZf4ph_KtXrfrcVPcBNLJjjB-a";
+  private static final String ACCESS_TOKEN = "T0IcR3FGlqIAAAAAAAAAW84BnKiFFEoJ3YIyMRUYPc3bomqfaAyDYBI2DgJnE5Ug";
 
     public static void main(String args[]) throws Exception {
     	
@@ -161,9 +162,9 @@ public class Main {
 	{      
     	try (OutputStream fos = new FileOutputStream(new File(dataPath + "/" + imageFile)))
     	{
-            FileMetadata metadata = client.files().downloadBuilder("/" + imageFile).download(fos);
+            FileMetadata metadata = client.files().downloadBuilder("/Photos/" + imageFile).download(fos);
             fos.close();
-            client.files().delete("/" + imageFile);       
+            client.files().delete("/Photos/" + imageFile);       
     	}
 	    catch (DbxException exception)
 		{
@@ -179,13 +180,13 @@ public class Main {
 	{
     	try 
     	{ 
-    		client.files().delete("/" + csvFile);
+    		client.files().delete("/Photos/" + csvFile);
     	} catch (DbxException exception)
 		{
 	    	System.out.println(csvFile + "file has been recovered by the client");
 		}
         try (InputStream in = new FileInputStream(dataPath + "/" + csvFile)) {
-            FileMetadata metadata = client.files().uploadBuilder("/" + csvFile).uploadAndFinish(in);
+            FileMetadata metadata = client.files().uploadBuilder("/Photos/" + csvFile).uploadAndFinish(in);
             in.close();
         } catch (DbxException exception)
 		{
