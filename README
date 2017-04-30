@@ -6,6 +6,8 @@ Notre application mobile fonctionne simplement. L'utilisateur lance l'applicatio
 et se retrouve face à un écran où il doit simplement prendre l'affiche de film 
 dont il souhaite connaitre les détails. Il valide sa photo et n'a plus qu'à 
 attendre le résultat. 
+Certains problèmes de lenteur peuvent être vu (notamment sur la vidéo) cela est dû 
+au dropbox, à qui nous sommes malheureusement obligé de composer. 
 
 
 
@@ -16,11 +18,21 @@ INSTALATION
     et dans le code de l'application ** A COMPLETER**
     SERVEUR
         DropBox
-        
-        Pour compiler le projet, il y a besoin de graddle. Un outil créé pour
-        l'Editeur Eclipse. L'installation se fait via le marketplace Eclipse.
-        **A completer**
-        
+        On utilise le plugin Eclipse "Gradle" pour utiliser l'API dropbox à distance.
+        Pour installer Gradle, il faut aller dans le Marketplace de l'IDE ou bien 
+        "install new software" dans le menu help.
+        A partir de là, normalement l'IDE devrait ouvrir correctement le projet, sinon 
+        il faudra le convertir en faisant un clic droit sur le projet dans 
+        l’arborescence de fichiers de l'IDE et faire "Configure to Gradle" 
+        Après ça il faut vérifier que la ligne "Compile 'com.dropbox.core:dropbox-core-sdk:2.1.1' 
+        soit dans le fichier build.gradle situé à la racine du projet, dans le paragraphe 
+        dependencies, comme ceci:
+
+              dependencies {
+                // ...
+                compile 'com.dropbox.core:dropbox-core-sdk:2.1.1'
+              } 
+              
         OpenCV
         Pour effectuer les traitements d'images et trouver les ressemblances
         entre les différentes images on utilise la librairie OpenCV pour java
@@ -29,5 +41,5 @@ INSTALATION
         http://opencv-java-tutorials.readthedocs.io/en/latest/01-installing-opencv-for-java.html#install-the-latest-java-version
         
     APPLICATION
-        ** A Completer**
+        CF le repertoire git correspondant.
         
