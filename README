@@ -10,7 +10,7 @@ attendre le résultat.
 
 
 INSTALATION
-    Avant toute chose pour que l'application fonctionne il faut avoir un compte
+    Avant toutes choses pour que l'application fonctionne il faut avoir un compte
     DropBox et faire le lien avec les tokens dans les codes serveur et celui de 
     l'application. Dans Main.java de CinePhone2000 ligne 19 "ACCESS_TOKEN"
     et dans le code de l'application ** A COMPLETER**
@@ -23,7 +23,7 @@ INSTALATION
         
         OpenCV
         Pour effectuer les traitements d'images et trouver les ressemblances
-        entre les différentes images on utliise la librairie OpenCV pour java
+        entre les différentes images on utilise la librairie OpenCV pour java
         (v2.46) : http://opencv.org/releases.html. Et suivre ce tutoriel
         pour l'installation selon votre OS: 
         http://opencv-java-tutorials.readthedocs.io/en/latest/01-installing-opencv-for-java.html#install-the-latest-java-version
