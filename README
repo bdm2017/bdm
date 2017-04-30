@@ -1,0 +1,33 @@
+                         Projet BDM 2017
+                    Recherche de film par affiche
+                    
+FONCTIONNEMENT
+Notre application mobile fonctionne simplement. L'utilisateur lance l'application
+et se retrouve face à un écran où il doit simplement prendre l'affiche de film 
+dont il souhaite connaitre les détails. Il valide sa photo et n'a plus qu'à 
+attendre le résultat. 
+
+
+
+INSTALATION
+    Avant toute chose pour que l'application fonctionne il faut avoir un compte
+    DropBox et faire le lien avec les tokens dans les codes serveur et celui de 
+    l'application. Dans Main.java de CinePhone2000 ligne 19 "ACCESS_TOKEN"
+    et dans le code de l'application ** A COMPLETER**
+    SERVEUR
+        DropBox
+        
+        Pour compiler le projet, il y a besoin de graddle. Un outil créé pour
+        l'Editeur Eclipse. L'installation se fait via le marketplace Eclipse.
+        **A completer**
+        
+        OpenCV
+        Pour effectuer les traitements d'images et trouver les ressemblances
+        entre les différentes images on utliise la librairie OpenCV pour java
+        (v2.46) : http://opencv.org/releases.html. Et suivre ce tutoriel
+        pour l'installation selon votre OS: 
+        http://opencv-java-tutorials.readthedocs.io/en/latest/01-installing-opencv-for-java.html#install-the-latest-java-version
+        
+    APPLICATION
+        ** A Completer**
+        
